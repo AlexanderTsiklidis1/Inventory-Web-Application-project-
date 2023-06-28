@@ -5,11 +5,11 @@ h1 {
     font-weight: bolder;
 }
 
-div {
-    display: grid;
+/* div {
+display: grid;
   grid-template-columns: repeat(1fr,4);
   grid-template-areas: 
   "h h h h"
   "s m m m"
   "f f f f";
-}
+} */
