@@ -9,6 +9,29 @@ input {
     display: block;
 }
 
+select {
+  display: block;
+}
+input {
+  padding-right: 200px ;
+}
+
+h4 {
+  text-decoration: underline;
+}
+
+img {
+  width: 100px;
+}
+
+/* article {
+  
+} */
+button {
+  display: block;
+}
+
+
 /* div {
 display: grid;
   grid-template-columns: repeat(1fr,4);
