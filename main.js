@@ -2,6 +2,7 @@ let body = document.querySelector("body");
 let header = document.createElement("header");
 h1 = document.createElement("h1");
 h1.textContent = "Sporting Goods Inventory";
+let addItemText = document.createElement("h2");
 header.append(h1);
 body.append(header);
 // let mainDiv = document.createElement("div");
@@ -94,18 +95,45 @@ firstItemInfo.textContent = "Boxing/Cardio";
 let firstItemPrice = document.createElement("p");
 firstItemPrice.textContent = "$42.99";
 
-let removeButton = document.createElement("button");
-removeButton.type = "Remove";
-removeButton.textContent = "Remove"
-
+let removeButton1 = document.createElement("button");
+removeButton1.type = "Remove";
+removeButton1.textContent = "Remove"
 let image1 = document.createElement("img");
 // image1.classList.add("boxing gloves");
 
 image1.src = "https://m.media-amazon.com/images/I/71eilZDrgWL._AC_SX679_.jpg";
-item1.append(firstItemName, firstItemInfo, firstItemPrice, image1, removeButton);
+item1.append(firstItemName, firstItemInfo, firstItemPrice, image1, removeButton1);
 
-itemsDiv.append(item1);
+let item2 = document.createElement("article");
+let secondItemName = document.createElement("h4");
+secondItemName.textContent = "Spalding Adult BasketBall";
+
+let secondItemInfo = document.createElement("h5");
+secondItemInfo.textContent = "Basketball/Cardio"
+
+let secondItemPrice = document.createElement("p");
+secondItemPrice.textContent = "29.99";
+
+let removeButton2 = document.createElement("button");
+removeButton2.type = "Remove";
+removeButton2.textContent = "Remove";
+
+let image2 = document.createElement("img");
+image2.src = "https://m.media-amazon.com/images/I/91j3VymnXSL._AC_SX679_.jpg";
+
+item2.append(secondItemName, secondItemInfo, secondItemPrice, image2, removeButton2);
+
+
+
+
+
+
+
+
+
+itemsDiv.append(item1, item2);
 body.append(itemsDiv);
+
 
 
 
