@@ -1,8 +1,12 @@
 h1 {
     text-align: center;
-    color: blue;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bolder;
+    background-color: black;
+}
+input {
+    display: block;
 }
 
 /* div {

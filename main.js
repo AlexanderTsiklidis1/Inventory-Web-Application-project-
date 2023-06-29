@@ -1,23 +1,54 @@
-
-h1 = document.createElement("h1");
-h1.textContent = "Bakery Inventory";
 let body = document.querySelector("body");
-let div = document.querySelector("div");
+h1 = document.createElement("h1");
+h1.textContent = "Sporting Goods Inventory";
 body.append(h1);
-body.append(div);
+let mainDiv = document.createElement("div");
 let form = document.createElement("form");
-let nameInput = document.createElement("input");
-let fieldset = document.createElement("fieldset");
-let nameLabel = document.createElement("label");
+form.classList.add("name");
+let names = document.querySelector("form.name");
+body.append(form);
+// let mainDiv = document.querySelector("div");
+// body.append(div);
 
 
-nameInput.type = "text";
-nameInput.name = "name";
+
+// names.textContent = "Name"
 
 
-let submitButton = document.createElement("button");
+// div.append(form);
+
+// let fieldset = document.createElement("fieldset");
+
+
+// let nameLabel = document.createElement("label");
+// nameLabel.class = "name"
+// let nameInput = document.createElement("input");
+
+// nameLabel.textContent = "Name of Item"
+// nameInput.type = "text";
+
+
+
+
+
+
+
 
 let resetButton = document.createElement("button");
+let submitButton = document.createElement("button");
+// form.append(nameLabel);
+// form.append(sportType)
+// div.append(form)
+// let sportType = document.createElement("label");
+// let sportTypeInput = document.createElement("input");
+// sportType.textContent = "Sport Name"
+// sportTypeInput.type = "text";
+
+// let productImg = document
+
+// sportType.append(sportTypeInput);
+// nameLabel.append(nameInput);
+
 
 
 
