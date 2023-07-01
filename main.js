@@ -3,6 +3,7 @@ let itemsDiv = document.createElement("div");
 let addItemText = document.createElement("h2");
 let body = document.querySelector("body");
 let header = document.createElement("header");
+let footer = document.createElement("footer");
 h1 = document.createElement("h1");
 h1.textContent = "Sporting Goods Inventory";
 header.append(h1);
@@ -28,8 +29,8 @@ let h3C = document.createElement("h3");
 h3C.textContent = "Image URL";
 let imageInput = document.createElement("input");
 imageInput.type = "url"
-imageInput.name = "url";
-imageInput.id = "url"
+imageInput.name = "src";
+imageInput.id = "src"
 imageInput.required = true;
 let h3D = document.createElement("h3");
 h3D.textContent = "Price";
@@ -123,7 +124,7 @@ form.addEventListener("submit", (event) => {
     
     let name = event.target.name.value;
     let sportType = event.target.sportType.value;
-    let IMG = event.target.url.value;
+    let IMG = event.target.src.value;
     let price = event.target.price.value;
     let inStock = event.target.inStock.value;
     
@@ -143,7 +144,10 @@ function itemTemplate(name, sportType, IMG, price, inStock) {
         newItem.append(document.createElement("br"), strong, sportType);
     }
     if (IMG) {
-       newItem.append(document.createElement("br"), IMG);
+        let img = document.createElement("img");
+        img.src = IMG
+        newItem.append(img)
+       
     }
     if (price) {
         const strong = document.createElement("strong");
