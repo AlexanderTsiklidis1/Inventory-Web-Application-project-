@@ -1,29 +1,44 @@
+body {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
 .container {
   display: grid;
-  grid-template-columns: repeat(3fr, 4);
+  grid-template-columns: repeat(1fr, 4);
   grid-template-areas: 
-  "m m"
-  "f f";
+  "h h h"
+  "m m m"
+  "f f f";
  border-style: dashed solid 3px blue ;
 }
-h1 {
-    text-align: center;
-    color: white;
-    font-family: fantasy;
-    font-weight: bolder;
-    background-color: black;
-    border-bottom: solid 5px aquamarine;
+header {
+  background: #46494c;  
+  border-bottom: 3px solid #73956f;
+  color: white;
 }
+h1 {
+  padding: 25px;
+  font-family: "Playfair Display", serif;
+}
+h2 {
+  color: gray;
+}
+
+
+
+
+
 input {
     display: block;
+    border:solid black 1px;
 }
 
 select {
   display: block;
+  margin-bottom: 20px;
 }
 input {
   padding-right: 200px ;
-
+  margin-bottom: 10px;
 }
 
 h4 {
@@ -38,9 +53,9 @@ img {
 /* article {
   
 } */
-button {
+/* button {
   display: block;
-}
+} */
 
 .src {
   width: 100px;
@@ -53,10 +68,30 @@ button {
 form {
   border: solid 3px white;
 }
-
-body {
-  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+strong {
+  text-decoration: underline;
 }
+.newItems h2 {
+  color: white;
+  font-family: "Playfair Display", serif;
+  padding-bottom: 0px;
+}
+
+.newItems h4 {
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+.newItems p {
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+.newItems strong {
+  color: white;
+  font-family: "Playfair Display", serif;
+}
+
+
 
 
 
@@ -68,3 +103,40 @@ display: grid;
   "s m m m"
   "f f f f";
 } */
+
+
+/* @media (min-width:768px) and (max-width: 1279px) {
+  .splash {
+    display: none;
+  }
+  main {
+    width: 90%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px 0px
+  }
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer h4 {
+    border-bottom: none;
+  }
+}
+ */

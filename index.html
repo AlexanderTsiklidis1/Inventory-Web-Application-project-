@@ -8,5 +8,54 @@
     <script defer src="main.js"></script>
     </head>
     <body>
+       <header>
+        <h1>Sporting Goods Inventory</h1>
+       </header>
+       <section class="new-item-form">
+        <h2>Create a New Sporting Good</h2>
+        <form id=New-item>
+            <label for="name">Item Name</label>
+            <input id="name" name="name" type="text"/>
+            <label for="sportType">Sport Type</label>
+            <input type="text" name="sportType" id="sportType" >
+            <label for="image">Item Image<span class= "required">*</span></label>
+            <input type="url" name="src" id="src" required>
+            <label for="price">Price</label>
+            <input type="price" name="price" id="price">
+            <label for="inStock">In-Stock<span class= "required">*</span></label>
+            <select name="inStock" id="inStock">
+                <option value="In-Stock">In-Stock</option>
+                <option value="Unavailable">Unavailable</option>
+            </select>
+            <button class="submit" type="submit">Submit</button>
+            <button class= "reset" type="Reset">Reset</button>
+        </form>
+    </section>
+       <h2>Current Inventory</h2>
+        <ul class = "container">
+        <li class = "newItems">
+            <h2>Everlast Boxing Gloves</h2>
+            <h4>Boxing/Cardio</h4>
+            <p>$42.99</p>
+            <img src="https://m.media-amazon.com/images/I/71eilZDrgWL._AC_SX679_.jpg">
+            <h4>In-Stock</h4>
+            <button class= "boxing" >Remove</button>
+        </li>
+        <li class="newItems"><h2>Spalding Adult BasketBall</h2>
+            <h4>Basketball/Cardio</h4>
+            <p>29.99</p>
+            <img src="https://m.media-amazon.com/images/I/91j3VymnXSL._AC_SX679_.jpg">
+            <h4>In-Stock</h4>
+            <button class ="basketball"  >Remove</button>
+        </li>
+        <li class="newItems">
+            <h2>Louisville Slugger Ash Bat</h2>
+            <h4>Baseball/Team Sports</h4>
+            <p>35.99</p>
+            <img src="https://dks.scene7.com/is/image/GolfGalaxy/16LSLAS3XSHNTRLXXWBT?qlt=70&amp;wid=1100&amp;fmt=webp">
+            <h4>In-Stock</h4>
+            <button class="baseball"  >Remove</button>
+        </li>
+    </ul>
     </body>
 </html>

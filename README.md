@@ -18,6 +18,8 @@ This app/website will allow the user to
 
 6- This website's appearance will change based on the size of the display on screen.
 
+7- Some of the inputs within the form will not have required tags in html but will cause an error message to display
+
 ## Stretch Goal Implementation
 
 -Included a footer at the bottom of the webpage even if all other elements are removed.
