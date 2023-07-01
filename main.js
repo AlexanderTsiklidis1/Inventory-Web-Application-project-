@@ -13,6 +13,14 @@ h1.textContent = "Sporting Goods Inventory";
 header.append(h1);
 body.append(header);
 let form = document.createElement("form");
+form.id = "New-Item"
+let label1 = document.createElement("label");
+label1.for = "name"
+label1.textContent = "Name of Item"
+let label2 = document.createElement("label");
+let label3 = document.createElement("label");
+let label4 = document.createElement("label");
+let label5 = document.createElement("label");
 
 let h3A = document.createElement("h3");
 h3A.textContent = "Name";
@@ -67,11 +75,12 @@ resetButton.textContent = "Reset";
 let submitButton = document.createElement("button");
 submitButton.type = "submit";
 submitButton.textContent = "Submit";
+form.append(h3A, nameInput, h3B, sportTypeInput, h3C, imageInput, h3D, priceInput, h3E, inStockSelect, submitButton, resetButton);
 
 let item1 = document.createElement("article");
-let firstItemName = document.createElement("h4");
+let firstItemName = document.createElement("h2");
 firstItemName.textContent = "Everlast Boxing Gloves";
-let firstItemInfo = document.createElement("h5");
+let firstItemInfo = document.createElement("h4");
 firstItemInfo.textContent = "Boxing/Cardio";
 let firstItemPrice = document.createElement("p");
 firstItemPrice.textContent = "$42.99";
@@ -79,14 +88,18 @@ let removeButton1 = document.createElement("button");
 removeButton1.type = "Remove";
 removeButton1.textContent = "Remove"
 let image1 = document.createElement("img");
-let inStock1 = document.createElement("strong");
-inStock1.textContent = "In Stock: In Stock"
+let inStock1 = document.createElement("h4");
+inStock1.textContent = "In-Stock"
+// let strong = document.createElement("strong");
+// strong.textContent = "Exercise Type: ";
+// newItem.append(document.createElement("br"), strong, sportType);
+
 image1.src = "https://m.media-amazon.com/images/I/71eilZDrgWL._AC_SX679_.jpg";
 
 let item2 = document.createElement("article");
-let secondItemName = document.createElement("h4");
+let secondItemName = document.createElement("h2");
 secondItemName.textContent = "Spalding Adult BasketBall";
-let secondItemInfo = document.createElement("h5");
+let secondItemInfo = document.createElement("h4");
 secondItemInfo.textContent = "Basketball/Cardio";
 let secondItemPrice = document.createElement("p");
 secondItemPrice.textContent = "29.99";
@@ -95,13 +108,13 @@ removeButton2.type = "Remove";
 removeButton2.textContent = "Remove";
 let image2 = document.createElement("img");
 image2.src = "https://m.media-amazon.com/images/I/91j3VymnXSL._AC_SX679_.jpg";
-let inStock2 = document.createElement("h5");
+let inStock2 = document.createElement("h4");
 inStock2.textContent = "In-Stock";
 
 let item3 = document.createElement("article");
-let thirdItemName = document.createElement("h4");
+let thirdItemName = document.createElement("h2");
 thirdItemName.textContent = "Louisville Slugger Series 3X Ash Bat";
-let thirdItemInfo = document.createElement("h5");
+let thirdItemInfo = document.createElement("h4");
 thirdItemInfo.textContent = "Baseball/Team Sports";
 let thirdItemPrice = document.createElement("p");
 thirdItemPrice.textContent = "35.99";
@@ -110,13 +123,12 @@ removeButton3.type = "Remove";
 removeButton3.textContent= "Remove";
 let image3 = document.createElement("img");
 image3.src = "https://dks.scene7.com/is/image/GolfGalaxy/16LSLAS3XSHNTRLXXWBT?qlt=70&wid=1100&fmt=webp";
-let inStock3 = document.createElement("h5");
+let inStock3 = document.createElement("h4");
 inStock3.textContent = "In-Stock"
 
 item1.append(firstItemName, firstItemInfo, firstItemPrice, image1, inStock1, removeButton1);
 item2.append(secondItemName, secondItemInfo, secondItemPrice, image2, inStock2, removeButton2);
 item3.append(thirdItemName, thirdItemInfo, thirdItemPrice, image3, inStock3, removeButton3);
-form.append(h3A, nameInput, h3B, sportTypeInput, h3C, imageInput, h3D, priceInput, h3E, inStockSelect, submitButton, resetButton);
 body.append(form);
 itemsDiv.append(item1, item2, item3);
 body.append(itemsDivTitle)
@@ -131,6 +143,8 @@ form.addEventListener("submit", (event) => {
     let IMG = event.target.src.value;
     let price = `$${event.target.price.value}`;
     let inStock = event.target.inStock.value;
+
+    
     
     generateItem(name, sportType, IMG, price, inStock);
     
@@ -141,17 +155,18 @@ form.addEventListener("submit", (event) => {
 function itemTemplate(name, sportType, IMG, price, inStock) {
     
     const newItem = document.createElement("article");
+    newItem.classList.add("newItems")
     if (name) {
-        let h4 = document.createElement("h4");
-        h4.textContent += name;
-        newItem.append(h4);
+        let h2 = document.createElement("h2");
+        h2.textContent += name;
+        newItem.append(h2);
     }
 
 
     if (sportType) {
-        let strong = document.createElement("strong");
-        strong.textContent = "Exercise Type: ";
-        newItem.append(document.createElement("br"), strong, sportType);
+        const strong = document.createElement("strong");
+        strong.textContent = "Exercise Type: " + sportType;
+        newItem.append(document.createElement("br"), strong);
     }
     if (IMG) {
         let img = document.createElement("img");
@@ -161,8 +176,8 @@ function itemTemplate(name, sportType, IMG, price, inStock) {
     }
     if (price) {
         const strong = document.createElement("strong");
-        strong.textContent = "Price: ";
-        newItem.append(document.createElement("br"), strong, price);
+        strong.textContent = "Price: " + price;
+        newItem.append(document.createElement("br"), strong);
     }
     if (inStock) {
         const strong = document.createElement("strong");

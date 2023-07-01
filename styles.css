@@ -4,14 +4,15 @@
   grid-template-areas: 
   "m m"
   "f f";
-  background-color: aqua;
+ border-style: dashed solid 3px blue ;
 }
 h1 {
     text-align: center;
     color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: fantasy;
     font-weight: bolder;
     background-color: black;
+    border-bottom: solid 5px aquamarine;
 }
 input {
     display: block;
@@ -48,6 +49,13 @@ button {
 .title {
   text-decoration: underline;
   color:  red;
+}
+form {
+  border: solid 3px white;
+}
+
+body {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 
 
