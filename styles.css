@@ -14,11 +14,12 @@ select {
 }
 input {
   padding-right: 200px ;
+  
 }
 
 h4 {
   text-decoration: underline;
-  
+
 }
 
 img {
@@ -30,6 +31,10 @@ img {
 } */
 button {
   display: block;
+}
+
+.src {
+  width: 100px;
 }
 
 

@@ -8,7 +8,6 @@ h1 = document.createElement("h1");
 h1.textContent = "Sporting Goods Inventory";
 header.append(h1);
 body.append(header);
-let ul = document.createElement("ul");
 let form = document.createElement("form");
 
 let h3A = document.createElement("h3");
@@ -35,7 +34,7 @@ imageInput.required = true;
 let h3D = document.createElement("h3");
 h3D.textContent = "Price";
 let priceInput = document.createElement("input");
-priceInput.type = "number";
+priceInput.type = "price";
 priceInput.name = "price";
 priceInput.id = "price"
 priceInput.required = "true";
@@ -115,7 +114,7 @@ item2.append(secondItemName, secondItemInfo, secondItemPrice, image2, inStock2, 
 item3.append(thirdItemName, thirdItemInfo, thirdItemPrice, image3, inStock3, removeButton3);
 form.append(h3A, nameInput, h3B, sportTypeInput, h3C, imageInput, h3D, priceInput, h3E, inStockSelect, submitButton, resetButton);
 body.append(form);
-itemsDiv.append(item1, item2, item3, ul);
+itemsDiv.append(item1, item2, item3);
 body.append(itemsDiv);
 
 
@@ -125,7 +124,7 @@ form.addEventListener("submit", (event) => {
     let name = event.target.name.value;
     let sportType = event.target.sportType.value;
     let IMG = event.target.src.value;
-    let price = event.target.price.value;
+    let price = `$${event.target.price.value}`;
     let inStock = event.target.inStock.value;
     
     generateItem(name, sportType, IMG, price, inStock);
