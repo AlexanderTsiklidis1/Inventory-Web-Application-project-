@@ -1,5 +1,9 @@
 // let mainDiv = document.createElement("div");
 let itemsDiv = document.createElement("div");
+itemsDiv.classList.add("container")
+let itemsDivTitle = document.createElement ("h3");
+itemsDivTitle.textContent = "Current Inventory";
+itemsDivTitle.classList.add("title");
 let addItemText = document.createElement("h2");
 let body = document.querySelector("body");
 let header = document.createElement("header");
@@ -75,8 +79,8 @@ let removeButton1 = document.createElement("button");
 removeButton1.type = "Remove";
 removeButton1.textContent = "Remove"
 let image1 = document.createElement("img");
-let inStock1 = document.createElement("h5");
-inStock1.textContent = "In-Stock"
+let inStock1 = document.createElement("strong");
+inStock1.textContent = "In Stock: In Stock"
 image1.src = "https://m.media-amazon.com/images/I/71eilZDrgWL._AC_SX679_.jpg";
 
 let item2 = document.createElement("article");
@@ -115,6 +119,7 @@ item3.append(thirdItemName, thirdItemInfo, thirdItemPrice, image3, inStock3, rem
 form.append(h3A, nameInput, h3B, sportTypeInput, h3C, imageInput, h3D, priceInput, h3E, inStockSelect, submitButton, resetButton);
 body.append(form);
 itemsDiv.append(item1, item2, item3);
+body.append(itemsDivTitle)
 body.append(itemsDiv);
 
 
@@ -136,16 +141,22 @@ form.addEventListener("submit", (event) => {
 function itemTemplate(name, sportType, IMG, price, inStock) {
     
     const newItem = document.createElement("article");
-    newItem.textContent += name;
+    if (name) {
+        let h4 = document.createElement("h4");
+        h4.textContent += name;
+        newItem.append(h4);
+    }
+
+
     if (sportType) {
         let strong = document.createElement("strong");
-        strong.textContent = "Sport Type: ";
+        strong.textContent = "Exercise Type: ";
         newItem.append(document.createElement("br"), strong, sportType);
     }
     if (IMG) {
         let img = document.createElement("img");
-        img.src = IMG
-        newItem.append(img)
+        img.src = IMG;
+        newItem.append(img);
        
     }
     if (price) {

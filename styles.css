@@ -1,3 +1,11 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3fr, 4);
+  grid-template-areas: 
+  "m m"
+  "f f";
+  background-color: aqua;
+}
 h1 {
     text-align: center;
     color: white;
@@ -14,7 +22,7 @@ select {
 }
 input {
   padding-right: 200px ;
-  
+
 }
 
 h4 {
@@ -36,6 +44,12 @@ button {
 .src {
   width: 100px;
 }
+
+.title {
+  text-decoration: underline;
+  color:  red;
+}
+
 
 
 /* div {

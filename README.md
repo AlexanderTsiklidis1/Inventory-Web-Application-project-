@@ -22,6 +22,8 @@ This app/website will allow the user to
 
 -Included a footer at the bottom of the webpage even if all other elements are removed.
 
+-Created all html elements and attributes inside of the DOM(using javascript).
+
 ## Parting Remarks
 
 It was a great pleasure developing this website/ inventory management application. The styling can use a bit of work, but I assure you it performs in the expected capacity. Please reach out to Alexander Tsiklidis for any other future websites you might need!
