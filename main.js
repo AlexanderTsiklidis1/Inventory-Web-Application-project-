@@ -5,6 +5,8 @@ h1.textContent = "Sporting Goods Inventory";
 let addItemText = document.createElement("h2");
 header.append(h1);
 body.append(header);
+
+let ul = document.createElement("ul");
 // let mainDiv = document.createElement("div");
 let form = document.createElement("form");
 let nameInput = document.createElement("input");
@@ -51,16 +53,18 @@ inStockSelect.id = "In-Stock";
 inStockSelect.textContent = "-- Select One --";
 
 let yesOption = document.createElement("option");
-yesOption.value = "yes";
-yesOption.textContent = "Yes";
+yesOption.value = "In-Stock";
+yesOption.textContent = "In-Stock";
 
 noOption = document.createElement("option");
-noOption.value = "No";
-noOption.textContent = "No";
+noOption.value = "Unavailable";
+noOption.textContent = "Unavailable";
 inStockSelect.append(yesOption,noOption);
 
 let h3E = document.createElement('h3');
 h3E.textContent = "In-Stock";
+
+
 
 
 
@@ -121,8 +125,115 @@ removeButton2.textContent = "Remove";
 let image2 = document.createElement("img");
 image2.src = "https://m.media-amazon.com/images/I/91j3VymnXSL._AC_SX679_.jpg";
 
+let item3 = document.createElement("article");
+let thirdItemName = document.createElement("h4");
+thirdItemName.textContent = "Louisville Slugger Series 3X Ash Bat";
+
+let thirdItemInfo = document.createElement("h5");
+thirdItemInfo.textContent = "Baseball/Team Sports";
+
+let thirdItemPrice = document.createElement("p");
+thirdItemPrice.textContent = "35.99";
+
+let removeButton3 = document.createElement("button");
+removeButton3.type = "Remove";
+removeButton3.textContent= "Remove";
+
+let image3 = document.createElement("img");
+image3.src = "https://dks.scene7.com/is/image/GolfGalaxy/16LSLAS3XSHNTRLXXWBT?qlt=70&wid=1100&fmt=webp";
+
+item3.append(thirdItemName, thirdItemInfo, thirdItemPrice, image3, removeButton3);
+
+
+
 item2.append(secondItemName, secondItemInfo, secondItemPrice, image2, removeButton2);
 
+// form.append(h3A, nameInput, h3B, sportTypeInput, h3C, imageInput, h3D, priceInput, h3E, inStockSelect, submitButton, resetButton);
+
+// function generateItem(itemNameInput, itemTypeInput, itemImageInput,itemInStockInput) {
+//     let newItem = document.createElement("article");
+
+
+
+// }
+
+form.addEventListener("SubmitButton", (event) => {
+    event.preventDefault();
+  
+    let itemName = event.target.nameInput.value;
+    let itemType = event.target.sportTypeInput.value;
+    let itemImage = event.target.imageInput.value;
+    let itemPrice = event.target.priceInput.value;
+    let itemInStock = event.target.inStockSelect.value;
+
+    generateItem(itemName, itemType, itemImage, itemPrice, itemInStock);
+    form.reset();
+}
+);
+
+  function itemLayout(itemName, itemType, itemImage, itemPrice, itemInStock) {
+    
+    const newItem = document.createElement("li");
+    if (itemName) {
+          newItem.append(document.createElement("br"), itemName);
+    }
+      
+    newItem.textContent += itemName;
+      
+    if (itemType) {
+          let strong = document.createElement("strong");
+          strong.textContent = "Sport Type: ";
+          newItem.append(document.createElement("br"), strong, itemType);
+    }
+    if (itemImage) {
+          newItem.append(document.createElement("br"), strong, itemImage);
+    }
+    if (itemPrice) {
+          const strong = document.createElement("strong");
+          strong.textContent = "Price: ";
+          newItem.append(document.createElement("br"), strong, itemPrice);
+    }
+    if (itemInStock) {
+          const strong = document.createElement("strong");
+          strong.textContent = "In Stock: ";
+          newItem.append(document.createElement("br"), strong, itemInStock);
+    }
+
+        const remove = document.createElement("button");
+        remove.innerText = "Remove";
+        newItem.append(document.createElement("br"), remove);
+      
+        remove.addEventListener("click", (event) => {
+          newItem.remove();
+        });
+      
+        return newItem;
+      }
+
+function generateItem(itemName, itemType, itemImage, itemPrice, itemInStock) {
+    const newItem = itemLayout(itemName, itemType, itemImage, itemPrice, itemInStock);
+    ul.append(document.createElement("br"), newItem);
+    itemsDiv.append(ul)
+}
+
+
+removeButton1.addEventListener("click", (event) => {{
+    item1.remove();
+}
+    return itemsDiv
+})
+
+removeButton2.addEventListener("click", (event) => {{
+    item2.remove();
+}
+    return itemsDiv
+})
+
+removeButton3.addEventListener("click", (event) => {{
+    item3.remove();
+}
+    return itemsDiv
+})
 
 
 
@@ -130,8 +241,7 @@ item2.append(secondItemName, secondItemInfo, secondItemPrice, image2, removeButt
 
 
 
-
-itemsDiv.append(item1, item2);
+itemsDiv.append(item1, item2, item3);
 body.append(itemsDiv);
 
 
