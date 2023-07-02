@@ -1,6 +1,11 @@
 let errorMessage = document.createElement("p");
 let formSection = document.querySelector("section.new-item-form")
+let footer = document.createElement("footer");
+let body = document.querySelector("body");
+body.append(footer)
 console.log(formSection)
+
+footer.textContent = " For More Functionality in Your Website, Contact me via Email @ AlexanderTsiklidis@Pursuit.Org";
 errorMessage.style.color="red"
 formSection.append(errorMessage);
 

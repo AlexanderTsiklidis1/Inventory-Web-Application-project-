@@ -14,13 +14,38 @@ header {
   background: #46494c;  
   border-bottom: 3px solid #73956f;
   color: white;
+  text-align: center;
 }
 h1 {
   padding: 25px;
   font-family: "Playfair Display", serif;
 }
-h2 {
-  color: gray;
+.title {
+  background: #46494c;  
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.form {
+  color: white;
+  text-align: center;
+  text-decoration: underline;
+  background: #46494c;
+}
+
+footer {
+  font-size: larger;
+  font-family: "Playfair Display", serif;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  border: 1px solid white;
+
+}
+
+.new-item-form h2 {
+  text-align: center;
 }
 
 
@@ -61,10 +86,6 @@ img {
   width: 100px;
 }
 
-.title {
-  text-decoration: underline;
-  color:  red;
-}
 form {
   border: solid 3px white;
 }
@@ -129,14 +150,10 @@ display: grid;
 }
   header {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1fr);
+    grid-template-areas: "h";
   }
-  main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 50px 0px
-  }
-  footer {
+  /* footer {
     padding: 25px;
     text-align: center;
   }
@@ -146,5 +163,6 @@ display: grid;
   footer h4 {
     border-bottom: none;
   }
-}
+} */
 
+}
