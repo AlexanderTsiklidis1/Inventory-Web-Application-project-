@@ -24,7 +24,7 @@ This app/website will allow the user to
 
 -Included a footer at the bottom of the webpage even if all other elements are removed.
 
-- Had originally created all html elements and attributes inside of the DOM(using javascript)/ changed later on (pseudocode was left in to show commitement to project LOL!)
+-Had originally created all html elements and attributes inside of the DOM(using javascript)/ changed later on (pseudocode was left in to show commitement to project LOL!)
 
 ## Parting Remarks
 

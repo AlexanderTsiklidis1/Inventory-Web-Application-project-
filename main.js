@@ -2,10 +2,10 @@ let errorMessage = document.createElement("p");
 let formSection = document.querySelector("section.new-item-form")
 let footer = document.createElement("footer");
 let body = document.querySelector("body");
+footer.textContent = " For More Functionality in Your Website, Contact me via Email @ AlexanderTsiklidis@Pursuit.Org";
 body.append(footer)
 console.log(formSection)
 
-footer.textContent = " For More Functionality in Your Website, Contact me via Email @ AlexanderTsiklidis@Pursuit.Org";
 errorMessage.style.color="red"
 formSection.append(errorMessage);
 
@@ -74,12 +74,12 @@ function itemTemplate(name, sportType, IMG, price, inStock) {
     if (sportType) {
         const h4 = document.createElement("h4");
         h4.textContent = sportType;
-        newItem.append(document.createElement("br"), h4);
+        newItem.append(h4);
     }
     if (price) {
         const p = document.createElement("p");
         p.textContent = price;
-        newItem.append(document.createElement("br"), p);
+        newItem.append(p);
     }
     if (!IMG) {
         
@@ -94,7 +94,7 @@ function itemTemplate(name, sportType, IMG, price, inStock) {
         const strong = document.createElement("strong");
         strong.textContent = inStock;
         inStockHeader.append(strong)
-        newItem.append(document.createElement("br"), inStockHeader);
+        newItem.append(inStockHeader);
     }
     
     
